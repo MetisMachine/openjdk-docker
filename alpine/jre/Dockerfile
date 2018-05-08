@@ -5,7 +5,7 @@ MAINTAINER Travis Sturzl <travis@metismachine.com>
 ENV ENVCONSUL_VERSION=0.7.3
 
 RUN apk --no-cache --update upgrade && \
-    apk --no-cache --update add bash && \
+    apk --no-cache --update add bash ca-certificates wget && \
     rm -rf /var/cache/apk/*
 
 RUN wget "https://releases.hashicorp.com/envconsul/${ENVCONSUL_VERSION}/envconsul_${ENVCONSUL_VERSION}_linux_amd64.tgz" && \
